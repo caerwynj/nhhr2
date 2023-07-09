@@ -1,0 +1,93 @@
+Nevill Hall Hospital - Work Placement
+Caerwyn Jones
+
+$Id: interface,v 1.1 1996/06/20 15:51:57 cjones Exp $
+$Log: interface,v $
+Revision 1.1  1996/06/20 15:51:57  cjones
+Initial revision
+
+
+
+INTERFACE DESIGN
+(For each sub system, its interface with other subsystems is designed
+and documented. This interface specification must be unambiguous as it
+allows the subsystem to be used without knowledge of the subsystem
+operation.)
+
+Sub-systems:
+Browser (Interface understood - html)
+WWW Server (Interface understood - http)
+Html Pages (Design of interface with user)
+Cgi-bin Scripts 
+Query handler
+Queue
+DB services
+Formatter
+DB
+
+
+Subsystem: Html pages
+Inputs:None 
+Source:none
+Outputs:Post or get method
+Destination:cgi via w3 server
+Requires:user selection or input into forms
+Pre-condition:none
+Post-condition:page displayed on browser
+Side effects:none
+
+Cgi-bin Scripts:
+Run time building of html
+Inputs: Post or get http method 
+Source: user input into embedded forms on html page
+Outputs: html page
+Destination:browser
+Requires: dbservices, formatter, input parameters
+Pre-condition: none
+Post-condition: html page written and sent to stdout
+Side effects: possibly fill in form on outputted html page
+
+
+Formatter services:
+Adds html templates to DB output
+Adds links to DB output
+Formats DB output into html
+Inputs: database output, format configuration files
+Source: cgibin
+Outputs: hmtl formatted table
+Destination: cgibin
+Requires: config files DB output
+Pre-condition:
+Post-condition:
+Side effects:
+
+Queue:
+Queue queries for selected databases
+Maintain connection with selected databases
+Collect queries into spool directory
+Inputs:database query 
+Source:database services
+Outputs:sends query to db
+Destination:db
+Requires:connection with db
+Pre-condition:db connected
+Post-condition:query sent and executed
+Side effects: holds query until space available.
+ 
+DB services:
+Execute requests on a database and return output
+Provide independence to other components from DB operation
+Handles links with database
+Prebuilt queries to PAS, RADIS, PATH
+Inputs: query parameters
+Source: cgibin
+Outputs:db results/table
+Destination:cgibin
+Requires:
+Pre-condition:
+Post-condition:
+Side effects:
+
+DB:
+Storage of Patient information
+Relational search capabilities to patient data

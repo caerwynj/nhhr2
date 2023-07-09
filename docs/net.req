@@ -1,0 +1,263 @@
+Nevill Hall Hospital - Work Placement
+Caerwyn Jones
+Intranet requirements
+
+$Id: net.req,v 1.1 1996/06/20 15:53:26 cjones Exp $
+$Log: net.req,v $
+Revision 1.1  1996/06/20 15:53:26  cjones
+Initial revision
+
+Revision 1.2  1996/06/19 15:35:13  cjones
+*** empty log message ***
+
+Revision 1.1  1996/06/18 13:48:44  cjones
+Initial revision
+
+
+Meeting on May 10 established the following requirements:
+The Intranet will operate solely through a w3 browser interface
+The interface should be no worse than that already provided by the 
+Ward User Interface (WUI) and if possible improve upon it.
+The interface should provide *query only* access to the following databases:
+	*CFIS
+	*PAS
+	*RADIS
+	*PATH
+All queries will be prebuilt (must confirm this).
+
+The software to achieve this interface should be modular in design to
+provide easy extensibility of further databases. 
+The software (interface engine) will be divided into the following services:
+
+1. The web user interface
+2. A database output formatter
+3. A query queue controller
+4. The specific services (prebuilt queries) supplied by each database.
+
+Additional (if further interaction with DBs is required)
+5. Query interpreter???
+If more interaction is requiered the web interface will logically present
+a distributed interface to the multiple databases. A forms web page will offer
+more direct access to each database using services supplied by output formatter
+and query queueing if required.
+
+
+***********************************************************************
+Requirements Definition (Formal)
+***********************************************************************
+
+1. Introduction
+
+1.1 
+An intranet server is to be set up which is to be the basis of development of
+an open system for information sharing within Nevill Hall hospital. The 
+initial application to be developed for the server is a frontend application
+for three, possibly four, databases within the hospital. These databases
+are: CFIS; PAS; RADIS; PATH. The application is intended to replace the 
+Ward User Interface (WUI) which acts as the Windows frontend to the three
+databases: PAS; RADIS; PATH.
+
+1.2
+The initial intranet server is to be confined to only supplying a hypertext
+server for use with a web browser. The web browser will therefore be the
+interface to all information resources. The users will therefore be 
+provided with an interface which is quick to learn with an inherent simplicity
+which should remain constant for all applications to be developed upon it.
+
+1.3
+The application should supply the same services as the WUI, namely to provide
+efficient information retrieval of patient data while hiding from the user
+the complexities of the underlying databases.
+
+2. System context
+
+2.1
+Nevill Hall Hospital currently has a Ward User Interface which provides
+easy access to the three RDBMS's: PAS; PATH; RADIS. 
+
+2.2
+The benefits of this system include:
+Simple and quick to learn graphical user interface
+Hides the complexity of the underlying DBs
+Provides search capabilities across the three DBs
+Requires no knowledge of query language or structure of DBs to use
+
+2.3
+The limitations of this system include:
+Can only be used on a windows pc system
+difficult to develope and expand upon
+contains miscellaneous bugs
+
+2.4
+The concept of an intranet is based upon the use of internet technologies
+within a corporation to provide a open system of information sharing. These
+technologies include the TCP/IP protocol and the applications: email; ftp; 
+network news; http. In particular a web browser can be used to view the
+information.
+
+2.5
+The benefits of this system include:
+Simple and quick to learn graphical user interface which remains constant
+over a range of applications
+An open system - a web browser can be used to any computer architecture
+in order to view the information
+Easier development and expansion - The standard display format of web
+pages uses html which is simple enough for any staff to work with. The 
+introduction of html editors will mean anyone can develope pages to be 
+displayed within the intranet. If the application software is written using 
+a modular design it should also be easy to expand any application.
+Reduced cost - The cost of user terminals should be reduced due to the fact
+that high spec PCs aren't required to view the information. Cheaper terminals
+can be used to replace them. 
+The internet community is so large much of the software is freely avialable,
+well written and proven. Start up costs for an intranet should be minimal.
+
+2.6
+The specific application to be developed is a web interface engine. 
+Functionally this application is identical to the WUI. The interface engine
+should overcome all problems with the WUI and provide the basis for further
+Database integration within the web browser interface. 
+
+2.7
+The benefits of this system include all those of the WUI and of the underlying
+intranet.
+
+3. Functional Requirements
+
+3.1
+The functions provided by the WUI as stated in the user documentation include:
+
+Display opening screen 
+Password protection using username and password
+Ability to change password
+Account setup/ Maintenance tasks ...
+Display patient demographic data
+Display clinical radiology data
+Display clinical pathology data
+Maintain location of patient data
+Handover reports
+Display patient history
+Display future appointment and waiting list entries
+Generation of bar coded patient label
+Emergency radiology and pathology reports
+Search using patients Unit Number
+Search using patients name and sex
+Display discharge information
+Online help
+Display trends in pathology report data
+Print out reports from Pathology ...
+
+
+The following describe in more detail the
+functionality of the web interface with respect to the Ward user interface.
+
+
+3.1.1. Display patient demographic data.
+The patients Unit number is entered. If the number exists in the DB the 
+unit number is displayed along with the date of birth, sex, name, address and
+postcode, else a message indicating the number doesn't exist is displayed.
+Also on the page are links to:
+Radiology, Pathology, History, Discharge, Help, Messages, links, switch, print.
+The user name is displayed.
+Additional patient info is diplayed according to user selection. This selection
+consists of:
+	General Practioner - Name + Address + tel.
+	Next of Kin - Name + Address + Tel.
+	Case note location
+The user is offered to submit or clear the input form. The user is offered
+to enter a search on name and sex, instead of Unit number. 
+
+3.1.2. Display clinical radiology data.
+A link from demographics displays a page with a list of patient names matching
+those of the patient. Each patient name is highlighted as a link which will
+display the radiology report summary if one exists. Each entry in the
+report summary is a link to report details. The user can browse through these
+and leave the radiology pages when they please.. ...
+
+3.1.3. Display clinical pathology data.
+Pathology data can be searched given the patients names and sex, number, or
+for a specimen number.
+A link from demographics page displays:
+The patients CRN 
+A table with columns headed:
+SpecimenID Date Time Source RequestItem Doctor
+with the corresponding rows, if any, underneath.
+The user is given buttons to:
+	select another patient
+	cancel the transaction
+	give a trends report
+	print the report
+Entries in the table are colour coded if they have a value according to a test.
+
+3.1.4. Maintain location of Patient
+This function is an option in the patient demographics page. It describes
+the location of the data held on a patient.
+
+3.1.5. Handover reports.
+... (not implemented)
+
+3.1.6. Previous parient history.
+A link from demographics displays patient details:
+	CRN; name; date of birth; address.
+The user is offered buttons to select Admissions, Appointments, Alerts, 
+Waiting lists. A headed table is displayed for each option with the rows, if
+any, displayed beneath. The default display is Admissions.
+A button to return home is also on the page.
+
+3.1.7. Future appointment and waiting list entries.
+These functions are displayed as options in the history function page.
+The appointment table displays: ...
+
+3.1.8. Generation of bar coded Patient label.
+...
+
+3.1.9. Emergency Radiology and Pathology reports.
+... (not implemented)
+
+3.1.10. Search using patients Unit Number
+The patients user number is entered. If a patient with that number exists
+then the demographics for that patient are displayed.
+
+3.1.11. Search using patients name and sex
+The patients last name and forename and sex are entered by the user. A list
+of possible matches to those names are displayed. Each match is highlighted
+for the user to select one to see further information.
+
+3.1.12. Display discharge information
+... (not implemented)
+
+3.1.13. Online help
+A button which links to online help is displayed on every page. The online
+help displays a contents page and navigation aids for the user to discover
+the necessary information.
+
+3.1.14. Display trends in pathology report data
+A link from the pathology page displays ...
+
+3.1.15. Print out reports from Pathology ...
+Prints a pathology report from the chosen data. ...
+
+3.1.16. Display opening screen 
+The opening screen introduces the user to the application and briefly 
+describes its services etc. Links/buttons are displayed for the user to
+continue.
+
+3.1.17. Password protection using username and password
+For the user to access information from the databases a valid password and
+username must be entered. It is only possible for the user to continue using
+the application if a correct values are given, else a message is displayed
+and a prompt to retry.
+
+3.1.18. Ability to change password
+Once the user has entered the correct username and password, s/he can click
+a button which will prompt the user to enter a new password and to confirm 
+it. The password database is then updated to reflect the change. The user
+is prompted to change the password if a default password is being used in
+a new account. The user cannont continue until the default password has 
+been changed.
+
+3.1.19. Account setup/ Maintenance tasks ...
+For users with priveleged access rights, it is possible to set up new user
+accounts. ...
+
+

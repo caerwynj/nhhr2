@@ -1,0 +1,19 @@
+<html> <head> <title> Radiology </title> </head>
+
+<body bgcolor="#FFFFFF">
+Patient:  
+<!-- [global FS counter; set FS " "; set cmd $1; set cmd2 $2;set counter 1; nextline] -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=pas&discard=discpas&filter=wui.filter&query=[format "%06d" $cmd2]> $0 </a>
+<!-- [set radno $1] -->
+<br>
+
+[looprint nextline {<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=$cmd|[format "%06d" "$cmd2"]+$radno+$counter> $0
+</a> <br>
+<!-- [set counter [expr $counter + 1]] -->
+}]
+$0
+
+
+</body>
+</html>
+

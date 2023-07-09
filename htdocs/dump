@@ -1,0 +1,62 @@
+<html> <head> <title> Radiology </title> </head>
+
+<body bgcolor="#FFFFFF">
+Patient Matches
+<!-- 1 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis2.filter&query=1|234151+38653> 38653    THOMAS JENNY PENOYRE NURSING HOME </a>
+
+<br>
+
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+1> OK151  16 DEC 87         CHEST SINGLE VIEW        
+</a> <br>
+<!-- 2 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+2> 2  08 MAR 91         ULTRASOUND ABDOMEN       
+</a> <br>
+<!-- 3 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+3> 3  11 APR 91         CT ABDOMEN (NO CONTRAST) 
+</a> <br>
+<!-- 4 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+4> 4  09 APR 92         ULTRASOUND ABDOMEN ULTRAS
+</a> <br>
+<!-- 5 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+5> 5  23 APR 92   3/4   COLONOSCOPY              
+</a> <br>
+<!-- 6 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+6> 6  14 JUN 94   GP    ULTRASOUND ABDOMEN       
+</a> <br>
+<!-- 7 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+7> 7  24 JUL 94   ACEM  ANKLE                    
+</a> <br>
+<!-- 8 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+8> 8  24 JUL 94   4/4   ANKLE THEATRE PROCEDURE L
+</a> <br>
+<!-- 9 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+9> 9  25 JUL 94   4/4   ANKLE                    
+</a> <br>
+<!-- 10 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+10> 10 14 OCT 94   OP    CT HEAD WITH CONTRAST    
+</a> <br>
+<!-- 11 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+11> 11 02 AUG 95   OP    CHEST SINGLE VIEW SHOULDE
+</a> <br>
+<!-- 12 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+12> 12 29 SEP 95   GP    ULTRASOUND ABDOMEN       
+</a> <br>
+<!-- 13 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+13> 13 06 SEP 96   OP    HIP - UP TO 2 PROJECTIONS
+</a> <br>
+<!-- 14 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+14> 14 07 SEP 96   1/2   ORTHOPAEDIC PINNING - HIP
+</a> <br>
+<!-- 15 -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis3.filter&query=1|234151+38653+15> 15 08 SEP 96   1/2   HIP - UP TO 2 PROJECTIONS
+</a> <br>
+<!-- 16 -->
+
+
+
+
+</body>
+</html>
+
+

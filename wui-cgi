@@ -1,0 +1,27 @@
+#!/bin/sh
+
+DB=/home/cjones/imp/dbdaemon/dbi
+HTML=/home/cjones/imp/tclformat/html
+
+echo Content-type: text/html
+echo
+
+if [ -x $DB ]; then
+	if [ $# = 0 ]; then
+		cat << EOM
+<html> <head>
+<TITLE>Ward User Interface</TITLE>
+</head>
+<body bgcolor="#FFFFFF">
+<H1>Ward User Interface</H1>
+<form method="POST" ACTION="http://nevroute/cgi-bin/wui.pl">
+Unit No.<input type=text name=query>
+</form>
+EOM
+	else
+		$DB pas $*  | $HTML /var/httpd/htdocs/wui.filter
+	fi
+else
+	echo Cannot find db on this system.
+fi
+

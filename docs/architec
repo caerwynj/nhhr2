@@ -1,0 +1,67 @@
+Nevill Hall Hospital - Work Placement
+Caerwyn Jones
+Design Process
+
+$Id: architecture,v 1.1 1996/06/20 15:51:13 cjones Exp $
+$Log: architecture,v $
+Revision 1.1  1996/06/20 15:51:13  cjones
+Initial revision
+
+Revision 1.2  1996/06/19 15:35:13  cjones
+*** empty log message ***
+
+Revision 1.1  1996/06/18 13:48:44  cjones
+Initial revision
+
+
+ARCHITECTURE DESIGN
+(The identification and documentation of the sub-systems making up the
+overall system and their relationships.)
+
+The web interface engine will use services provided by other modules to
+implement its functions. These subsystems and the components of the interface
+engine must each be described. 
+
+System Components:
+Browser
+WWW Server
+HTML Pages (Web Interface)
+CGI-BIN (Web Interface)
+DB services
+DB Queue
+Output formatter
+DB (PAS,RADIS,PATH)
+
+Browser
+Browser software is already supplied, possibly free. It provides a point
+and click interface to documents with embeded links to other documents or
+executable programs such as cgi-bin scripts. It interprets the html pages
+for display on the browser. It sends user input to the web server which is
+passed on to the relevant script, identified by its URL (uniform resource
+locator)
+
+WWW Server
+Software is already supplied. It handles requests from the web browser for
+html pages to be sent or to run a cgi-bin script which will output html
+which the server will handle.
+ 
+Web Interface
+The web interface is viewed by the user as pages. Each page within the interface
+provides specific functionality to the user.
+There are two types of html pages. Stand alone - those requiring no runtime
+information before they are displayed. And pages which need parameters
+and create output depending on those parameters. These two seperate types of
+pages are divided into the components - HTML pages and CGI-bin pages. 
+
+HTML pages (Web Interface)
+Have embedded links to other pages and executables eg. DB queries. This
+provides navigation around the system and views on the information resources.
+Its purpose is to provide a uniform/consistent front end to
+the Hospitals information resources. The pages are standalone and are not 
+generated at runtime.
+
+CGI-BIN (Web Interface)
+Cgi scripts generate html pages which usually require database information or
+form input from a previous page. These html pages are created at runtime. they
+also contain links to other pages. 
+

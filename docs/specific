@@ -1,0 +1,71 @@
+Nevill Hall Hospital - Work Placement
+Caerwyn Jones
+
+$Id: specification,v 1.1 1996/06/20 15:52:38 cjones Exp $
+$Log: specification,v $
+Revision 1.1  1996/06/20 15:52:38  cjones
+Initial revision
+
+
+
+ABSTRACT SPECIFICATION
+(For each sub-system, an abstract specification of the services it provides
+and the constraints under which it must operate.)
+
+
+Sub-systems:
+Browser
+WWW Server
+Html Pages
+Cgi-bin Scripts
+Queue
+DB services
+Formatter
+DB
+
+Browser services:
+Interprets html documents
+Displays html documents
+Highlights embeded links
+Provides document navigation
+Handles network connection
+Provides history list
+Hot list
+User configuration
+
+WWW Server services:
+Handles requests for html page
+Passes html documents to browser
+executes cgi-bin scripts and passes output to browser
+Handles network connection
+manages hyper text transfer protocol
+
+Html Pages services:
+Contains page descriptions defining user view to application
+Contains embedded links to application services
+Contains links to graphics to enhance GUI
+
+Cgi-bin Scripts services:
+Provides password security
+Maintenance tasks
+Run time building of html
+
+Formatter services:
+Adds html templates to DB output
+Adds links to DB output
+Formats DB output into html
+
+Queue services:
+Queue queries for selected databases
+Maintain connection with selected databases
+Collect queries into spool directory
+ 
+DB services:
+Execute requests on a database and return output
+Provide independence to other components from DB operation
+Handles links with database
+Prebuilt queries to PAS, RADIS, PATH
+
+DB:
+Storage of Patient information
+Relational search capabilities to patient data

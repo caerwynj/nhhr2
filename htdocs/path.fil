@@ -1,0 +1,16 @@
+<html> <head> <title> Pathology </title> </head> 
+<body bgcolor="#FFFFFF">
+[global FS; set FS "\n"]
+<table border>
+<tr> <td align=right><b>Patients CRN:</b></td><td>$1</td></tr> 
+<!-- [nextline] --> 
+<tr><td align=right><b>Name:</b></td><td>$1</td></tr>
+<!-- [nextline] --> 
+<tr><td align=right><b>Address:</b></td><td>$1</td></tr>
+</table>
+<pre>SpecimenID Date      Time   Source       RequestItem                   Doctor
+ [looprint nextline {<a href=http://nevroute/cgi-bin/wui.pl?dbname=path&query=2|[lindex [split $1] 0]&discard=discpath&filter=specimen.filter>$1</a>
+ }] </pre>
+</body>
+</html>
+

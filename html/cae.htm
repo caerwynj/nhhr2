@@ -1,0 +1,36 @@
+<html> <head> <title> Output from pas database </title> </head>
+<body bgcolor="#FFFFFF">
+<!/* 1 */>
+
+<table border>
+<tr><td align=right valign=TOP><b>Unit Number:</b></td><td valign=TOP>223703 </td> 
+</tr>
+<tr><td align=right><b>Name:</b></td><td>CAERWYN JONES </td></tr>
+<tr><td align=right><b>Address:</b></td><td>GLAN ONNEY                    , LLANGATTOCK                   , CRICKHOWELL                   </td></tr>
+<tr><td align=right><b> Postcode:</b></td><td>NP8 1HU     </td></tr>
+<tr><td align=right><b>Sex:</b></td><td>M </td></tr>
+<tr><td align=right><b>Date of Birth:</b></td><td>30 May 1973 </td> </tr>
+<tr><td align=right><b>Files Location:</b></td><td>MAIN LIBRARY</td></tr>
+</table>
+
+<table align=right border>
+<tr><td><a href=http://nevroute/cgi-bin/wui.pl?dbname=path&discard=discpath&filter=path.filter&query=223703 >Pathology</a></td>
+<td><a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis.filter&query=1|223703 >Radiology</a></td></tr>
+<tr><td><a href=http://nevroute/cgi-bin/wui.pl?dbname=pas&discard=discpath&filter=pat-hist.filter&query=3|223703 >History</a></td>
+<td><a href=http://nevroute/help.html>Help</a></td></tr>
+</table>
+
+<dl> <dt><b>Next of Kin:</b> MR DRB JONES              </dt><dd> GLAN ONNEY                     LLANGATTOCK CRICKHOWELL        810246                         </dd>
+<dt><b>GP:</b> DA HILEY                  </dt><dd> WAR MEMORIAL HEALTH CTR.       CRICKHOWELL POWYS                                             </dd></dl>
+
+<table align=right border >
+<tr><td align=right><b>Unit No: </b></td><td>
+<form method="POST" action="http://nevroute/cgi-bin/wui.pl">
+<input type=text name=query size=6> 
+</td> </tr> </form>
+</table>
+
+<!--  -->
+</body>
+</html> 
+

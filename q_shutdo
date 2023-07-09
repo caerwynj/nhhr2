@@ -1,0 +1,8 @@
+#!/bin/sh
+
+kill `ps -x | awk ' BEGIN { ORS=" " } 
+	/ Qserver$/ {print $1}
+	/ pas / {print $1}
+	/ path / {print $1}
+	/ radis / {print $1}' `
+rm -f /var/tmp/patv /var/tmp/pasv /var/tmp/radv /var/tmp/rend

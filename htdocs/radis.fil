@@ -1,0 +1,14 @@
+<html> <head> <title> Radiology </title> </head>
+
+<body bgcolor="#FFFFFF">
+Patient Matches
+<!-- [global FS; set FS " ";set cmd $1; set cmd2 $2; nextline] -->
+<a href=http://nevroute/cgi-bin/wui.pl?dbname=radis&discard=discradis&filter=radis2.filter&query=$cmd|[format "%06d" $cmd2]+$1> $0 </a>
+
+<br>
+
+[looprint nextline {}]
+
+</body>
+</html>
+

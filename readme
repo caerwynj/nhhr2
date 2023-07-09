@@ -1,0 +1,50 @@
+(c) 1996 Nevill Hall and District Trust. I.T. Department.
+Author: Caerwyn Jones
+Last modified: 12/08/96
+
+An introduction to the Qserver.
+
+Start the Qserver with the command:
+Qserver &
+The Qserver then resides in memory waiting to be programmed in order
+to start sessions with remote databases.
+
+To program the Qserver start it's shell with the command:
+qsh
+You will then see the prompt 'Q>' displayed at which point you can
+enter any Tcl command which will be sent to the Qserver and interpreted.
+To exit from the shell type ctrl-C
+
+Six additional commands have been supplied with the Qserver in order to
+handle sessions. These are:
+* qserver_init  [max number of databases]
+* new_db [DatabaseName]
+* open_session [DatabaseName] [Login parameters]
+* close_session [DatabaseName]
+* delete_db [DatabaseName]
+* session_info
+* q_restart [Restart script]
+
+qserver_init must be called once when the Qserver is first started and should
+only be called once. It must be called before any other commands. 
+Its argument is the maximum number of databases that
+will be handled by the Qserver (eg. 3 - for pas, radis, path).
+
+new_db creates the queue for a database and must be called before any
+open_session commands for the same database. It should only be called once
+for each database. The argument is the name of the database.
+
+open_session creates a new session for a database and can be called as many
+times as you wish but only after the new_db command has been called for
+the same database.
+
+close_session closes a session for a particular database. The argument
+is the name of the database. It can be called as many times until all
+the sessions on a database have been killed.
+
+delete_db closes all sessions for a database and removes the queue for the
+database. 
+
+session_info returns information about all current databases and the number 
+and state of all sessions for each database.
+ 

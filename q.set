@@ -1,0 +1,8 @@
+qserv_init 3
+new_db path
+new_db radis
+new_db pas
+open_session pas WINTEGRATE
+open_session path scrandon comp1le SJCS.PATH
+open_session radis radis 97 y sc HEALTH1 X RADIS FIND.WUI.SJCS
+

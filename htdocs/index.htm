@@ -1,0 +1,33 @@
+<html> <head> <title> Ward User Interface </title> </head> 
+
+<body bgcolor="#FFFFFF">
+
+
+<a href="http://nevroute/help.html"> <h1> Ward User Interface </h1> </a>
+<form method="POST" action="http://nevroute/cgi-bin/wui.pl">
+<table valign=centre> <tr>
+<td>Unit Number:</td>
+<td align=right><input type="text" name="query"></td></tr>
+</table>
+</form> 
+<hr>
+<form method="POST" action="http://nevroute/cgi-bin/wui.pl">
+<table >
+<tr><td>Surname <input TEXT name=surname size=12></td>
+<td>Forename <input type="text" name=forename size=12></td>
+</tr>
+<tr><td>Date of Birth <input type="text" name="dob" size=8> </td>
+<td>Male <input type="radio" name="sex" value="M" checked>
+Female<input type="radio" name="sex" value="F"></td>
+</tr>
+<tr><td>Path <input type="radio" name="dbname" value=path checked>
+Radis <input type="radio" name="dbname" value=radis > </td>
+</tr>
+</table>
+<br>
+<input type="reset">
+<input type="submit" value="submit">
+</form>
+<a href=http://nevroute/change-passwd.html>Password</a>
+</body>
+</html>
